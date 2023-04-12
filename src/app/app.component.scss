@@ -1,0 +1,28 @@
+.head{
+    background-color: 	#1fab89;
+    color: #d7fbe8;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+mat-card{
+    width: 95%;
+    height: 45vh;
+}
+.example-full-width{
+    width: 100%;
+}
+mat-form-field{
+    width: 95%;
+}
+mat-card-header{
+    margin-bottom: 25px;
+}
+mat-card-title{
+    color: #62d2a2;
+}
+.centralizar{
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+}

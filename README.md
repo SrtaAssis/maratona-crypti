@@ -1,27 +1,61 @@
-# MaratonaCrypti
+# Decodificando o Futuro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+## Equipe 22
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<table>
+  <tr>
+    <th>Aluno</th>
+    <th>RA</th>
+    <th>Curso</th>
+  </tr>
+  <tr>
+    <td>Carolina Rodrigues</td>
+    <td>057456</td>
+    <td>7º E.C</td>
+  </tr>
+  <tr>
+    <td>Deyvison Silva</td>
+    <td>180405</td>
+    <td>3º E.C</td>
+  </tr>
+  <tr>
+    <td>Elis de Souza</td>
+    <td>025369</td>
+    <td>7º E.C</td>
+  </tr>
+  <tr>
+    <td>Jabes Candido</td>
+    <td>180740</td>
+    <td>3º S.I</td>
+  </tr>
+  <tr>
+    <td>Júlia Assis Felipe</td>
+    <td>020714</td>
+    <td>7º E.C</td>
+  </tr>
+  <tr>
+    <td>Kaue Lopes</td>
+    <td>058071</td>
+    <td>7º E.C</td>
+  </tr>
+  <tr>
+    <td>Lucas Magalhães Carvalho</td>
+    <td>197070</td>
+    <td>1º S.I</td>
+  </tr>
+  <tr>
+    <td>Maria Eduarda Sousa</td>
+    <td>056328</td>
+    <td>7º E.C</td>
+  </tr>
+  <tr>
+    <td>Pedro Sebastião</td>
+    <td>011570</td>
+    <td>5º S.I</td>
+  </tr>
+  <tr>
+    <td>Pedro Strutz Reis</td>
+    <td>196219</td>
+    <td>1º E.C</td>
+  </tr>
+</table>
