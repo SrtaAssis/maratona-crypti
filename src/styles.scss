@@ -1,33 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { 
-    height: 100%; 
-    font-family: 'Courier New', Courier, monospace !important;
-    background-color: #f2f4f6;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
   }
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    font-weight: 500;
-    color: gray;
-    font-family: 'PoppinsRegular';
-  
-    font-size: 0.9rem;
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-weight: 500;
-    color: gray;
-    font-family: 'PoppinsRegular';
-  
-    font-size: 0.9rem;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    font-weight: 500;
-    color: gray;
-    font-family: 'PoppinsRegular';
-  
-    font-size: 0.9rem;
-  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
 
   input {
     padding-left: 18px !important;

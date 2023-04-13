@@ -7,7 +7,7 @@
 }
 mat-card{
     width: 95%;
-    height: 45vh;
+    height: 100%;
 }
 .example-full-width{
     width: 100%;
@@ -26,3 +26,14 @@ mat-card-title{
     display: flex;
     justify-content: center;
 }
+.margin-bottom{
+    margin-bottom: 20px;
+}
+.button-ativo{
+    background-color: #1fab89 !important;
+    color: white !important;
+}
+.button-ativo:focus{
+    outline: none;
+}
+
