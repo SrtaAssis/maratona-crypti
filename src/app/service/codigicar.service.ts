@@ -7,13 +7,13 @@ export class CodigicarService {
 
   constructor() { }
 
-  getCifraCesar(value:string):string{
+  getCifraCesar(value:string,chave:string):string{
     return null;
   }
-  getCifraVigenere(value:string):string{
+  getCifraVigenere(value:string,chave:string):string{
     return null;
   }
-  getCercaTrilho(value:string):string{
+  getCercaTrilho(value:string,chave:string):string{
     return null;
   }
 }

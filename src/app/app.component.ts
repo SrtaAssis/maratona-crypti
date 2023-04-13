@@ -38,7 +38,9 @@ export class AppComponent {
   }
 
   codificar():any{
-    if( !this.formEntrada.valid || !this.formConfiguracao.valid) {
+    console.log(this.isChaveValid());
+
+    if( !this.formEntrada.valid || !this.formConfiguracao.valid || !this.isChaveValid()) {
       console.log("nao valido");
       return false;
     }
@@ -46,21 +48,23 @@ export class AppComponent {
     console.log(this.textoEntrada.value);
     
     if(this.tipoCodigo.value == "cifraCesar"){
-      this.textoSaida.setValue(this.codigicarService.getCifraCesar(this.textoEntrada.value)); 
+      this.textoSaida.setValue(this.codigicarService.getCifraCesar(this.textoEntrada.value,this.chave.value)); 
     }
     else if(this.tipoCodigo.value == "cifraVigenere"){
-      this.textoSaida.setValue(this.codigicarService.getCifraVigenere(this.textoEntrada.value))
+      this.textoSaida.setValue(this.codigicarService.getCifraVigenere(this.textoEntrada.value,this.chave.value))
 
     }
     else if(this.tipoCodigo.value == "cercaTrilho"){
-      this.textoSaida.setValue(this.codigicarService.getCercaTrilho(this.textoEntrada.value))
+      this.textoSaida.setValue(this.codigicarService.getCercaTrilho(this.textoEntrada.value,this.chave.value))
 
     }
 
   }
 
   decodificar():any{
-    if( !this.formEntrada.valid || !this.formConfiguracao.valid) {
+    console.log(this.isChaveValid());
+    
+    if( !this.formEntrada.valid || !this.formConfiguracao.valid || !this.isChaveValid()) {
       console.log("nao valido");
       return false;
     }
@@ -68,16 +72,36 @@ export class AppComponent {
     console.log(this.textoEntrada.value);
 
     if(this.tipoCodigo.value == "cifraCesar"){
-      this.textoSaida.setValue(this.decodificarService.getCifraCesar(this.textoEntrada.value))
+      this.textoSaida.setValue(this.decodificarService.getCifraCesar(this.textoEntrada.value,this.chave.value))
 
     }
     else if(this.tipoCodigo.value == "cifraVigenere"){
-      this.textoSaida.setValue(this.decodificarService.getCifraVigenere(this.textoEntrada.value))
+      this.textoSaida.setValue(this.decodificarService.getCifraVigenere(this.textoEntrada.value,this.chave.value))
 
     }
     else if(this.tipoCodigo.value == "cercaTrilho"){
-      this.textoSaida.setValue(this.decodificarService.getCercaTrilho(this.textoEntrada.value))
+      this.textoSaida.setValue(this.decodificarService.getCercaTrilho(this.textoEntrada.value,this.chave.value))
     }
+    
+  }
+
+  isChaveValid():boolean{
+    if(this.tipoCodigo.value == "cercaTrilho"){
+      console.log("cercaTrilho");
+      
+      let numeros:any = {1: 0, 2: 0, 3:0, 4:0, 5:0, 6:0, 7:0};
+      this.chave.value.split("").forEach(c => {
+        numeros[c] ++;
+        console.log(numeros);
+
+        if(numeros[c] > 1){
+          
+
+          return false;
+        }
+      });
+    }
+    return true;
   }
 
   getPattern():string{
@@ -88,9 +112,8 @@ export class AppComponent {
       const tamanho = this.textoEntrada.value.length ;      
       return `.{${tamanho}}`;
     }
-    else if(this.tipoCodigo.value == "cercaTrilho"){      
-      return '1{1}2{1}3{1}4{1}5{1}6{1}7{1}';
-
+    else if(this.tipoCodigo.value == "cercaTrilho"){
+      return "[1-7]{7}"
     }
     return '';
 
@@ -116,9 +139,13 @@ export class AppComponent {
   get tipoCodigo(): AbstractControl {
     return this.formConfiguracao.get('tipoCodigo');
   }
+  get chave(): AbstractControl {
+    return this.formConfiguracao.get('chave');
+  }
   get textoSaida(): AbstractControl {
     return this.formSaida.get('textoSaida');
   }
+
   get registerE() {
     return this.formEntrada.controls;
   }
