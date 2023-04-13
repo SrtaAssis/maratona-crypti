@@ -90,16 +90,15 @@ export class AppComponent {
       console.log("cercaTrilho");
       
       let numeros:any = {1: 0, 2: 0, 3:0, 4:0, 5:0, 6:0, 7:0};
-      this.chave.value.split("").forEach(c => {
-        numeros[c] ++;
-        console.log(numeros);
+      let chave = this.chave.value.split("");
+      for(let i = 0; i<7 ; i++){
+        numeros[chave[i]] ++;
+        console.log(chave[i]);
 
-        if(numeros[c] > 1){
-          
-
+        if(numeros[chave[i]] > 1){
           return false;
         }
-      });
+      }
     }
     return true;
   }

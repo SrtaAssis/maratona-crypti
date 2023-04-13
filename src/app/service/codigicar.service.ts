@@ -90,7 +90,10 @@ export class CodigicarService {
   return texto_criptografado;
 }
  changeCaracter(caracter, chave){
-  let index = this.findIndex(this.alfabeto, caracter) + chave;
+  console.log(caracter);
+  console.log(chave);
+
+  let index = Number(this.findIndex(this.alfabeto, caracter)) + Number(chave);
 
   /**
    * se na subtracao, que e quando faz a decodificacao do texto, der um valor menor que 37,
@@ -108,7 +111,8 @@ export class CodigicarService {
   if (index > 36){
       index = index % 37;
   }
-  
+  console.log(caracter);
+  console.log(index);
   return this.alfabeto[index];
 }
 
