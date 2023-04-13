@@ -1,7 +1,7 @@
 # Decodificando o Futuro
 
 ## Equipe 22
-
+<p>Data Criação: 12/04/2023</p>
 <table>
   <tr>
     <th>Aluno</th>
